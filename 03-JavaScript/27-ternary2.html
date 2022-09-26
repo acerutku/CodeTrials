@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="ortak" id="Emekli" onchange="hesapla('Emekli')" />
+    <label for="Emekli">Emekli</label> <br />
+    <input type="radio" name="ortak" id="Calisan" onchange="hesapla('Calisan')" />
+    <label for="Calisan">Calisan</label>
+
+    <div id="Sonuc"></div>
+
+    <script>
+        function hesapla(tip){//tip= emekli veya calisan olur degisken ismidir
+           // alert(tip);
+        let maas = 3000;
+        
+        maas = (tip == "Emekli")? (maas-maas*0.1) : maas;
+        document.querySelector("#Sonuc").innerHTML = `Maas = ${maas}`;
+
+
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.baslik{
+    color: green;
+}
+h1{
+    color: gold;
+}
+h1.baslik{
+    color: pink;
+}
+*{
+    color: green;
+}

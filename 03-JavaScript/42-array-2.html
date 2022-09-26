@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sayilar = [12, 56, 14, 67, 89, 33, 22];
+      let enBuyuk = sayilar[0]; //ilk veriyi almak icin index(0) yazmaliyiz
+      //ilk veriyi en buyuk kabul ettik
+
+      for (let i = 0; i < sayilar.length; i++) {
+        //i=1 de yazabilirdik
+        //ilk karsilasmayi atlardik(12==12)
+
+        if (sayilar[i] > enBuyuk) {
+          enBuyuk = sayilar[i];
+        }
+      }
+      console.log(enBuyuk);
+    </script>
+  </body>
+</html>

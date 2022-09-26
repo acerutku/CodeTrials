@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function test() {
+        var x = "Merhaba";
+        let y = "Dunya";
+
+        if (true) {
+          var a = "Ankara";
+          let b = "Izmir";
+        }
+        console.log(x, y, a); //Merhaba Dunya Ankara
+        console.log(b); // hata verir.cunku let'le tanimlanan degisken block
+        //scope disinda kullanilamaz
+      }
+      test(); //function i cagirarak calistirdik
+    </script>
+  </body>
+</html>

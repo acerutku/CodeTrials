@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="txtMaas" />
+    <button onclick="hesapla()">Hesapla</button>
+    <label for="" id="lblSonuc"></label>
+
+    <script>
+      function hesapla() {
+        let maas = document.querySelector("#txtMaas").value;
+        let sonuc = maas > 10000 ? (maas > 20000 ? "Cok Iyi" : "Iyi") : "Az";
+
+        document.querySelector("#lblSonuc").innerHTML = sonuc;
+      }
+    </script>
+  </body>
+</html>

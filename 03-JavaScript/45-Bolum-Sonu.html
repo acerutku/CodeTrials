@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        background-color: green; /* arka plani renklendirdim*/
+        color: white; /* yazi rengini degistirdim*/
+        border-color: green; /* cerceveleri renklendirdim*/
+        padding: 0.5rem 1rem; /* 0.5rem ustten alttan 1 rem de sagdan soldan*/
+        border-radius: 0.3rem; /* koseleri oval olsun*/
+      }
+      .isim {
+        font-family: Georgia, "Times New Roman", Times, serif; /* yazi tipini degistiridim */
+        padding: 0.3rem 1rem; /* text box ekle butonuyla ayni boyut oldu */
+        border: 1px solid green;
+        border-radius: 0.3rem;
+      }
+      .liste {
+        /* list box kismi */
+        width: 220px;
+        border: 1px solid green;
+        border-radius: 0.3rem;
+      }
+
+      /* 5-butonlara still verelim*/
+    </style>
+  </head>
+  <body>
+    <!-- 1-birinci text box ile ekle butonunu gruplandirmak icin div arasina yazalim
+     -->
+    <div>
+      <input
+        type="text"
+        id="txtAd"
+        placeholder="Adinizi Giriniz"
+        class="isim"
+      />
+      <!-- class ismi isim olsun -->
+      <input
+        type="button"
+        value="Ekle"
+        id="btnEkle"
+        class="btn"
+        onclick="ekle()"
+      />
+    </div>
+    <!-- 11- onclick ile ekle fonsiyonu olusturup butona baglayalim 
+     -->
+
+    <!-- 2-list box icin yeni bir div olusturalim -->
+    <div style="margin-top: 1rem">
+      <select size="10" id="lstAdlar" class="liste">
+        <!-- class ismi liste olsun -->
+        <!-- 3-on adet isim gostersin      -->
+      </select>
+    </div>
+
+    <!-- 4-Sil ve Sirala butonlarini div arasinda olusturalim -->
+    <div style="margin-top: 1rem">
+      <input
+        type="button"
+        value="Sil"
+        id="btnSil"
+        class="btn"
+        onclick="sil()"
+      /><!-- 16 sil fonsiyonu olusturalim -->
+      <input
+        type="button"
+        value="Sirala"
+        id="btnSirala"
+        class="btn"
+        onclick="sirla()"
+      /><!-- 22-siralaya onclick verdik -->
+    </div>
+
+    <script>
+      let arrNames = ["Ali", "Ayse", "Veli"]; //6- Default olarak birkac isim ekledim
+      //Ilk olarak selectin icine option lari yerlestirelim Bunun icin bir doldurma fonsiyonu olusturalim
+      //----------------------------------------------------------Diziyi Guncelleyen fonsiyon
+      function fillList() {
+        let strOption = ""; //7-Dizinin elemanlarina yerlestirecegimiz bir alan actik
+        for (let i = 0; i < arrNames.length; i++) {
+          //8-dizinin icinde gezinecegiz ve her donusunde bir
+          //optioni select icinde olusturacagiz
+          strOption += `<option>${arrNames[i]}<option>`;
+        }
+        document.querySelector("#lstAdlar").innerHTML = strOption;
+        //9-dongu bittikten sonra listeye yerlestirdik
+      }
+      fillList(); //10 calismasi icin cagirdim
+      //-------------------------------- 12 - ekle() Fonksiyonu
+      function ekle() {
+        //13 once textboxdan degeri alalim
+        const ad = document.querySelector("#txtAd").value;
+        arrNames.push(ad); //14 diziye ekledim
+        fillList(); //15 eklenen yeni isimle diziyi guncelledim
+      }
+      //---------------------------------17 sil fonksiyonu
+      function sil() {
+        const index = document.querySelector("#lstAdlar").selectedIndex;
+        //18 tum listeyi sectim sonra tiklanan elemanin indexini aldim
+        // alert(index); 19- secip sile basinca index numarasini gosterir
+        arrNames.splice(index, 1); //20 index numarasini siler
+        fillList(); //21- silinince listeyi yeniler
+      }
+      //----------------------------------23-sirala fonksiyonu
+      function sirala(){
+        arrNames.sort();//24-diziyi alfabetik siralar
+        fillList();
+        
+
+      }
+    </script>
+  </body>
+</html>

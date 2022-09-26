@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = 50;
+      let y = 40;
+      let z = 10;
+
+      console.log(x == 50); //true
+      console.log(x == 45); //false
+      console.log(x === 50); //true
+      console.log(x == "50"); //true, == sadece veriye bakar
+      console.log(x === "50"); //false === data tipine de bakar
+
+      console.log(x === 50n); //false
+      console.log(x > y); //true
+      console.log(x > "30"); // true buyuk kucuk data tipine bakmaz
+      console.log(x > "130"); //false
+      console.log(x > "asd"); //false verir hata vermez.
+    </script>
+  </body>
+</html>

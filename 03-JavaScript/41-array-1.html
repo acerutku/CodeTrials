@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kurslar = ["JavaScript", "Salesforce", "DataScience", "Python"];
+      console.log(kurslar); //4 elemanli bir array olarak gosterir
+      console.log(kurslar[1]); //Salesforce u verir
+      console.log(kurslar[kurslar.length - 1]); //Son elemani verir,Pyhton
+      console.log(kurslar.length); //4 u verir
+
+      const kurslar2 = ["JavaScript", "Salesforce", "DataScience", "Python"];
+      kurslar2[0] = "React";
+      kurslar2[1] = "Java";
+
+      console.log(kurslar2); //const ile tanimlanmasina ragmen degistirebildik
+                             //Cunku array'ler non-primitive oldugu icin degistirilebilir
+
+      kurslar2 = ["Ali", "Veli"];
+      console.log(kurslar2); //constla tanimlanmissa array i
+                            //komple degistiremeyiz
+                            //ama let e cevirirsek degistirebilirz
+                            
+      
+                            
+    </script>
+  </body>
+</html>

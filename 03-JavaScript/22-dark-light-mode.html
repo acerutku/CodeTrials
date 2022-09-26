@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .darkMode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="Dark Mode" id="btnMod" onclick="modDegis()" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum,
+      doloribus eius at alias corrupti in esse repellat, autem, cupiditate
+      delectus quae. Tempora ad distinctio, quaerat neque itaque placeat
+      sapiente. Repellat libero eaque accusamus, minima iste ducimus obcaecati
+      animi similique recusandae sunt ipsum enim deserunt, eum quibusdam iure.
+      Assumenda perspiciatis quas obcaecati numquam dicta dolor eaque ipsa optio
+      reprehenderit non. Voluptates nihil itaque temporibus natus, quaerat animi
+      quod laborum odit ex! Vitae, nostrum recusandae esse deserunt odio optio
+      at eveniet saepe consectetur quod cumque eaque aspernatur fugiat, est
+      iste. Impedit?
+    </p>
+
+    <script>
+      let mod = "Light"; //default olani mod degiskenine attum
+
+      function modDegis() {
+        if (mod == "Light") {
+          document.querySelector("body").classList.add("darkMode");
+          document.querySelector("#btnMod").value = "Light Mode";
+          mod = "dark";
+        } else {
+          document.querySelector("body").classList.remove("darkMode");
+          document.querySelector("#btnMod").value = "Dark Mode";
+          mod = "light";
+        }
+      }
+    </script>
+  </body>
+</html>

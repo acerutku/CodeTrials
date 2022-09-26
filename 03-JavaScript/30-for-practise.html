@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="textbox" placeholder="Baslangici Giriniz" />
+    <input type="text" name="" id="textbox1" placeholder="Bitisi Giriniz" />
+    <button onclick="hesapla()">Hesapla</button>
+    <h1 id="sonuc"></h1>
+
+    <script>
+      function hesapla() {
+        let sayi1 = document.querySelector("#textbox").value;
+        let sayi2 = document.querySelector("#textbox1").value;
+        let toplam = 0;
+        let temp; //1.yer degistirme algoritmasi gecici bir degisken tanimladim
+
+        sayi1 = Number(sayi1);
+        sayi2 = Number(sayi2);
+        //console.log(sayi1,sayi2);
+
+        if (sayi2 < sayi1) {
+          temp = sayi1;
+          sayi1 = sayi2;
+          sayi2 = temp;
+        }
+        if (sayi1 == 0 || sayi2 == 0) {
+          alert("Gecerli bir sayi giriniz");
+          return; //cagrildigi butona dondurur
+        }
+
+        for (let i = sayi1; i <= sayi2; i++) {
+          //sayi girmeyip butona basilirsa 0, 0 gelir.
+          //bu durumu engellemek icin yazdik
+          // console.log(i); dongunun calismanin kontrolu
+          if (i % 7 == 0) {
+            toplam++;
+            //  console.log(i); 7 ye tam bolunen sayilari gormek icin ekledik
+          }
+        }
+        document.querySelector("#sonuc").innerHTML = toplam;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pink {
+        /* asagida boyle bir class yok.JS ile (add) ekleyecegim */
+        background-color: pink;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="name blue red" id="baslik">Merhaba</h1>
+
+    <script>
+      let stiller = document.querySelector("#baslik").classList; //1- h1 class listelerini toplu olarak gorduk
+      console.log(stiller);
+      stiller.add("pink"); //3-variable olusturarak still  class listine pink i ekledik
+
+      document.querySelector("#baslik").classList.add("yellow");
+      document.querySelector("#baslik").classList.remove("yellow");
+    </script>
+  </body>
+</html>

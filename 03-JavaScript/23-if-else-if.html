@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="txtFiyat">
+    <button id="btnHesapla" onclick="indirim()">Hesapla</button>
+    <div style="margin-top:1rem ;" id="lblSonuc"></div>
+    <script>
+        function indirim(){
+         let fiyat = document.querySelector("#txtFiyat").value;
+         if(fiyat>500){
+            fiyat = fiyat - fiyat*0.1;
+         }else if(fiyat>300){
+            fiyat = fiyat - fiyat*0.07;
+            
+         }else{
+            fiyat = fiyat - fiyat*0.05;
+         }
+         
+         document.querySelector("#lblSonuc").innerHTML = `Son fiyat: ${fiyat}`;
+        }
+    </script>
+</body>
+</html>

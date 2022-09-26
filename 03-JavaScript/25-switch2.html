@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtGun">
+    <input type="button" value="Goster" id="btnHesapla" onclick="hesapla()">
+    <div id="lblSonuc"></div>
+
+    <script>
+        function hesapla(){
+            let gun = document.querySelector("#txtGun").value;
+            gun = Number(gun);
+
+            switch(gun){
+
+                case 1:
+                document.querySelector("#lblSonuc").innerHTML = "Pazar";
+                break;
+                case 2:
+                document.querySelector("#lblSonuc").innerHTML = "Pazartesi";
+                break;
+                case 3:
+                document.querySelector("#lblSonuc").innerHTML = "Sali";
+                break;
+                case 4:
+                document.querySelector("#lblSonuc").innerHTML = "Carsamba";
+                break;
+                case 5:
+                document.querySelector("#lblSonuc").innerHTML = "Persembe";
+                break;
+                case 6:
+                document.querySelector("#lblSonuc").innerHTML = "Cuma";
+                break;
+                case 7:
+                document.querySelector("#lblSonuc").innerHTML = "Cumartesi";
+                break;    
+
+                default:
+                document.querySelector("#lblSonuc").innerHTML = "Dogru bir gun giriniz";   
+                break;
+
+            }
+        }
+    </script>
+</body>
+</html>

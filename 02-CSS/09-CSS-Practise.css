@@ -1,0 +1,19 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+nav.menu{
+    text-align: center;
+    background-color: rgb(199, 191, 191);
+    width: 150px;
+}
+.active{
+    background-color: rgb(29, 26, 26);
+
+}
+a.link{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
